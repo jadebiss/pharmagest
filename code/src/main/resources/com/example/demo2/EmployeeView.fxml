@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.UserAccountController">
+    <children>
+        <TextField fx:id="UserIdText" layoutX="193.0" layoutY="41.0" prefHeight="26.0" prefWidth="58.0" promptText="Emp ID" />
+        <Label layoutX="194.0" layoutY="21.0" text="User ID" />
+        <Button fx:id="searchEmpBtn" layoutX="194.0" layoutY="108.0" mnemonicParsing="false" onAction="#searchUserAccount" prefHeight="25.0" prefWidth="56.0" text="Search" />
+        <Button fx:id="deleteEmpBtn" layoutX="327.0" layoutY="108.0" mnemonicParsing="false" onAction="#deleteUserAccount" prefHeight="25.0" prefWidth="56.0" text="Delete" />
+        <Button fx:id="updateEmpBtn" layoutX="263.0" layoutY="108.0" mnemonicParsing="false" onAction="#updateUsername" prefHeight="25.0" prefWidth="56.0" text="Update" />
+        <Button fx:id="addEmpBtn" layoutX="82.0" layoutY="155.0" mnemonicParsing="false" onAction="#insertUserAccount" prefHeight="26.0" prefWidth="92.0" text="Add User" />
+        <TextArea fx:id="resultArea" layoutX="7.0" layoutY="250.0" prefHeight="85.0" prefWidth="167.0" wrapText="true" />
+        <Label layoutX="9.0" layoutY="231.0" text="Result Console">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <TextField fx:id="newUsername" layoutX="263.0" layoutY="41.0" prefHeight="26.0" prefWidth="92.0" promptText="new username" />
+        <Label layoutX="263.0" layoutY="21.0" text="New Username" />
+        <VBox layoutX="97.0" layoutY="24.0" spacing="4.0">
+            <children>
+                <TextField fx:id="usernameText" prefHeight="25.0" prefWidth="79.0" promptText="Name" />
+                <TextField fx:id="firstNameText" prefHeight="25.0" prefWidth="79.0" promptText="first name" />
+                <TextField fx:id="lastNameText" prefHeight="25.0" prefWidth="79.0" promptText="last name" />
+            <TextField fx:id="passwordText" prefHeight="25.0" prefWidth="79.0" promptText="password" />
+            </children>
+        </VBox>
+        <VBox layoutX="9.0" layoutY="28.0" prefWidth="67.0" spacing="12.0">
+            <children>
+                <Label text="Username" />
+                <Label text="First Name" />
+                <Label text="Lastname" />
+            <Label text="Password" />
+            </children>
+        </VBox>
+        <Separator layoutY="14.0" prefHeight="4.0" prefWidth="706.0" />
+        <Separator layoutX="180.0" layoutY="14.0" orientation="VERTICAL" prefHeight="397.0" prefWidth="6.0" />
+        <TableView fx:id="userAccountTable" editable="true" layoutX="191.0" layoutY="138.0" prefHeight="234.0" prefWidth="393.0" tableMenuButtonVisible="true">
+            <columns>
+                <TableColumn fx:id="id_useraccountsColumn" prefWidth="57.0" text="Id" />
+                <TableColumn fx:id="usernameColumn" prefWidth="75.0" text="Username" />
+                <TableColumn fx:id="firstNameColumn" prefWidth="73.0" text="FirstName" />
+                <TableColumn fx:id="lastNameColumn" prefWidth="79.0" text="Lastname" />
+                <TableColumn fx:id="passwordColumn" prefWidth="73.0" text="Password" />
+                <TableColumn fx:id="statusColumn" prefWidth="73.0" text="Status" />
+            </columns>
+        </TableView>
+        <Button fx:id="searchEmpsBtn" layoutX="388.0" layoutY="108.0" mnemonicParsing="false" onAction="#searchUserAccounts" prefHeight="25.0" prefWidth="139.0" text="Search All Users" />
+      <TextField fx:id="newFirstName" layoutX="366.0" layoutY="41.0" prefHeight="26.0" prefWidth="92.0" promptText="new First Name" />
+      <TextField fx:id="newLastName" layoutX="468.0" layoutY="41.0" prefHeight="26.0" prefWidth="92.0" promptText="new Last Name" />
+      <TextField fx:id="newPassword" layoutX="572.0" layoutY="41.0" prefHeight="26.0" prefWidth="92.0" promptText="new Password" />
+      <Label layoutX="472.0" layoutY="19.0" text="New Last Name" />
+      <Label layoutX="366.0" layoutY="19.0" text="New First Name" />
+      <Label layoutX="572.0" layoutY="19.0" text="New Password" />
+    </children>
+</AnchorPane>
